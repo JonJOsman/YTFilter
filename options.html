@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <style>
+          body {
+            font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+            font-size: 80%;
+            min-width: 600px;
+            max-height: auto;
+          }
+          #status {
+            /* avoid an excessively wide status text */
+            white-space: pre;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            max-width: 400px;
+          }
+        </style>
+    </head>
+    <body>
+        <div id="filters">
+            <h3>Filters</h3>
+            <div id="filter-inputs">
+            </div>
+            <button id="save" type="button">Save</button>
+            <button id="add" type="button">Add new filter</button>
+        </div>
+        <script src="jquery-2.2.0.min.js"></script>
+        <script src="options.js"></script>
+    </body>
+</html>

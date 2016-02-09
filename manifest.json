@@ -1,0 +1,30 @@
+{
+    "manifest_version" : 2,
+    
+    "name": "YT Subscription Filter",
+    "description": "This extensions hides unwanted videos from your YouTube subscription feed.",
+    "version": "1.0",
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html",
+        "default_title": "Filter YouTube Subscriptions"
+    },    
+    "content_scripts": [
+        {
+            "all_frames": true,
+            "matches": ["*://www.youtube.com/feed/subscriptions*"],
+            "exclude_matches":["*://www.youtube.com/"],
+            "css": ["filter.css"],
+            "js": ["filter.js"],
+            "run_at": "document_idle"
+        }
+    ],    
+    "permissions": [
+        "storage"
+    ],
+    "options_page": "options.html",
+    "options_ui": {
+        "chrome_style": true,
+        "page": "options.html"
+    }
+}
